@@ -10,7 +10,7 @@
     "newLine": "lf",
     "module": "es2015",
     "moduleResolution": "node",
-    "outDir": "../dist/packages/search-directive",
+    "outDir": "../dist/packages/ionic-search-directive",
     "rootDir": ".",
     "sourceMap": true,
     "inlineSources": true,
@@ -20,7 +20,7 @@
     "types": [],
     "baseUrl": ".",
     "paths": {
-      "search-directive": ["../dist/packages/search-directive"]
+      "ionic-search-directive": ["../dist/packages/ionic-search-directive"]
     },
     "typeRoots": [
       "./node_modules/@types/"
@@ -33,7 +33,7 @@
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
     "flatModuleOutFile": "index.js",
-    "flatModuleId": "search-directive",
+    "flatModuleId": "ionic-search-directive",
     "skipTemplateCodegen": true
   }
 }

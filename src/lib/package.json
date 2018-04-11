@@ -1,5 +1,5 @@
 {
-    "name": "@webfactor/search-directive",
+    "name": "@webfactor/ionic-search-directive",
     "version": "0.1.0",
     "repository": {
         "type": "git",
@@ -7,10 +7,10 @@
     },
     "keywords": ["angular"],
     "license": "MIT",
-    "main": "./bundles/search-directive.umd.js",
-    "es2015": "./esm2015/search-directive.js",
-    "module": "./esm5/search-directive.es5.js",
-    "typings": "./search-directive.d.ts",
+    "main": "./bundles/ionic-search-directive.umd.js",
+    "es2015": "./esm2015/ionic-search-directive.js",
+    "module": "./esm5/ionic-search-directive.es5.js",
+    "typings": "./ionic-search-directive.d.ts",
     "peerDependencies": {
         "ionic-angular": "^3.9.2",
         "@ionic/storage": "^2.1.3",
