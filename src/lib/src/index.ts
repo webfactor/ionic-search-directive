@@ -1,4 +1,3 @@
-export * from './sample.module';
-export * from './sample.component';
-export * from './sample.service';
-export * from './sample.module';
+export { SearchDirectiveModule } from './search-directive.module';
+export * from './directives/search-button';
+export * from './pages/search-modal/search-modal';

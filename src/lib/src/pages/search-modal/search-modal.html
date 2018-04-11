@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{ searchLabel }}</ion-title>
+        <ion-buttons end>
+            <button ion-button clear icon-only (click)="dismissModal()">
+                <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+    <ion-toolbar>
+        <ion-searchbar [(ngModel)]="term" (keyup.enter)="search()" [placeholder]="searchLabel"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>
+            {{ searchHistoryLabel }}
+        </ion-list-header>
+
+        <wf-status-message [icon]="placeholderIcon || 'search'" *ngIf="!history.length">
+            {{ searchPlaceholder }}
+        </wf-status-message>
+
+        <ion-item *ngFor="let term of history, let i = index" (click)="restoreHistoryItem(i)">
+            {{ term }}
+            <button ion-button icon-only clear item-end color="dark" (click)="removeHistoryItem(i, $event)">
+                <ion-icon name="trash"></ion-icon>
+            </button>
+        </ion-item>
+    </ion-list>
+</ion-content>

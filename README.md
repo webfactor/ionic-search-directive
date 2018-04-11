@@ -1,28 +1,49 @@
 # SearchDirective
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
+Adds search functionality w/ history to any button. 🔍   
+Use `[wf-search]` attribute on any `<button>` element.
 
-## Development server
+## Installation
+- Install `@webfactor/ionic-search-directive` via npm.
+- Add `SearchDirectiveModule` to your Ionic module imports.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## I/O
+```typescript
+searchLabel?: string
+```
+Default: 'Suche nach'. String for display in the title and the searchbar placeholder.
 
-## Code scaffolding
+```typescript
+searchHistoryLabel?: string
+```  
+Default: 'Suchverlauf'. Title for the search history.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```typescript
+searchPlaceholder?: string
+``` 
+Default: 'Bitte gib einen Suchbegriff ein und tippe auf die Lupe.'. Get displayed when history items are present.
 
-## Build
+```typescript
+searchPlaceholderIcon?: string
+```
+Default: 'search'. Icon that gets displayed in the history placeholder. Use ionicons.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```typescript
+(search)
+```
+Emits when the user searches for a term. _$event_ holds the search term.
 
-## Running unit tests
+## Example
+```html
+<button ion-button icon-left color="primary" 
+    wf-search 
+    (search)="onSearch($event)" 
+    searchLabel="Suche nach Läden"
+    searchPlaceholder="Bitte gib einen Suchbegriff ein und tippe auf die Lupe"
+>
+    <ion-icon name="search"></ion-icon>
+    Suchen nach...
+</button>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![SearchButton](https://github.com/webfactor/ionic-lib/blob/master/screenshots/search-button.png)
