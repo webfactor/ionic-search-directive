@@ -1,0 +1,21 @@
+{
+  "name": "@webfactor/search-directive",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "url"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "main": "./bundles/search-directive.umd.js",
+  "es2015": "./esm2015/search-directive.js",
+  "module": "./esm5/search-directive.es5.js",
+  "typings": "./search-directive.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/http": "^5.0.0"
+  }
+}
