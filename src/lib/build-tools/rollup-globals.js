@@ -1,4 +1,8 @@
 const rollupGlobals = {
+  'ionic-angular': 'ionic-angular',
+  '@ionic/storage': '@ionic/storage',
+  '@webfactor/ionic-status-message': '@webfactor/ionic-status-message',
+  
   'date-fns': 'date.fns',
   'codemirror': 'codemirror',
   'ng2-nouislider/src/nouislider': 'nouislider',
